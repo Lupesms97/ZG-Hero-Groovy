@@ -30,10 +30,6 @@ class Empresa extends Match{
             println vaga
 
     }
-    void CandidatoCurtido(Candidato candidato) {
-        empresaLikedCandidato.add(candidato);
-    }
-
 
 
 }

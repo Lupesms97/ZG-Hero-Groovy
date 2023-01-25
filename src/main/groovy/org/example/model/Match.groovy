@@ -1,43 +1,44 @@
 package org.example.model
 
 abstract class Match {
-    List<Vagas> candidatoLikedEmpresa;
-    List<Candidato> empresaLikedCandidato;
+    List<Vagas> candidatoLikedVaga = new ArrayList<>()
+    List<Candidato> empresaLikedCandidato = new ArrayList<>()
     String nome
     String email
     String senha
+    boolean match
 
 
 
-    List VagaCurtida(Vagas vaga){
-        candidatoLikedEmpresa.add(vaga)
-        candidatoLikedEmpresa
-    }
-    void CandidatoCurtido(Candidato candidato) {
-        empresaLikedCandidato.add(candidato)
-    }
 
-    void LikeCandidato(Candidato candidato, Vagas vaga){
-        candidato.VagaCurtida(vaga)
-        vaga.setLiked(1)
-        println("Você curtiu a vaga de $vaga.getTitulo()!")
-
-    }
-    void LikeEmpresa(Empresa empresa, Candidato candidato){
-        empresa.CandidatoCurtido(candidato)
-        println "Você curtiu o: $candidato.getNome()!"
+    void LikeCandidato( Vagas vaga, Candidato candidato){
+       candidatoLikedVaga.add(vaga)
+        println("Você curtiu a vaga !")
         VerificarMatch(candidato)
-    }
+        println(getMatch())
 
-    boolean VerificarMatch(Candidato candidato){
-        boolean match
-        match = candidatoLikedEmpresa.contains(empresaLikedCandidato)
-        match
+
     }
-    boolean VerificarMatch(Empresa empresa){
+    void LikeEmpresa(Candidato candidato){
+        empresaLikedCandidato.add(candidato)
+        VerificarMatch(candidato)
+        println(getMatch())
+
+    }
+//    Verificar o match do empresa
+    boolean VerificarMatch(Vagas vaga){
+
+        if (candidatoLikedVaga.contains(vaga)) setMatch(true)
+        else setMatch(false)
+        getMatch()
+    }
+//    Verificar o match da candidato
+    boolean VerificarMatch(Candidato candidato){
         boolean match;
-        match = empresaLikedCandidato.contains(candidatoLikedEmpresa)
-        match
+        if (empresaLikedCandidato.contains(candidato)) setMatch(true)
+        else setMatch(false)
+        getMatch()
+
     }
 
 
