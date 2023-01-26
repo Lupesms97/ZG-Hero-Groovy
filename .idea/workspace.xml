@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e511974-bef7-4224-8f21-5b649e113ec2" name="Changes" comment="Primeiro Commit do projeto refatorado">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="8e511974-bef7-4224-8f21-5b649e113ec2" name="Changes" comment="Fazendo logica de verificação de match, falta apenas implementar uma forma de verificar toda a lista e não somente um item dela">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/org/example/Main.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/org/example/Main.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/org/example/model/Candidato.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/org/example/model/Candidato.groovy" afterDir="false" />
@@ -24,6 +23,7 @@
     </projectState>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -85,11 +85,19 @@
       <option name="project" value="LOCAL" />
       <updated>1674663023207</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fazendo logica de verificação de match, falta apenas implementar uma forma de verificar toda a lista e não somente um item dela">
+      <created>1674674952953</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674674952953</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeiro Commit do projeto refatorado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeiro Commit do projeto refatorado" />
+    <MESSAGE value="Fazendo logica de verificação de match, falta apenas implementar uma forma de verificar toda a lista e não somente um item dela" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fazendo logica de verificação de match, falta apenas implementar uma forma de verificar toda a lista e não somente um item dela" />
   </component>
 </project>

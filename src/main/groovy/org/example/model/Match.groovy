@@ -1,46 +1,42 @@
 package org.example.model
 
+import groovy.transform.ToString
+
+@ToString
 abstract class Match {
     List<Vagas> candidatoLikedVaga = new ArrayList<>()
     List<Candidato> empresaLikedCandidato = new ArrayList<>()
     String nome
     String email
     String senha
-    boolean match
+    String UF
+    String cep
+    String descicao
 
 
+    void LikeCandidato(Vagas vaga, Candidato candidato,Empresa empresa) {
+        candidatoLikedVaga.add(vaga)
 
-
-    void LikeCandidato( Vagas vaga, Candidato candidato){
-       candidatoLikedVaga.add(vaga)
-        println("Você curtiu a vaga !")
-        VerificarMatch(candidato)
-        println(getMatch())
-
-
+        if (empresa.empresaLikedCandidato.contains(candidato)) println("Deram match")
+        else print("Não deram match")
     }
-    void LikeEmpresa(Candidato candidato){
+
+    void LikeEmpresa(Candidato candidato, Vagas vaga) {
         empresaLikedCandidato.add(candidato)
-        VerificarMatch(candidato)
-        println(getMatch())
 
-    }
-//    Verificar o match do empresa
-    boolean VerificarMatch(Vagas vaga){
-
-        if (candidatoLikedVaga.contains(vaga)) setMatch(true)
-        else setMatch(false)
-        getMatch()
-    }
-//    Verificar o match da candidato
-    boolean VerificarMatch(Candidato candidato){
-        boolean match;
-        if (empresaLikedCandidato.contains(candidato)) setMatch(true)
-        else setMatch(false)
-        getMatch()
+        if (candidato.candidatoLikedVaga.contains(vaga)) print("Deram match")
+        else print("Não deram macth")
 
     }
 
+    List<Vagas> MostrarVagasCurtidas() {
+        for (Vagas vaga : candidatoLikedVaga)
+            println(vaga)
+    }
 
-
+    List<Candidato> MostrarCandidatosCurtidos() {
+        for (Candidato candidato : empresaLikedCandidato)
+            println(candidato)
+    }
 }
+

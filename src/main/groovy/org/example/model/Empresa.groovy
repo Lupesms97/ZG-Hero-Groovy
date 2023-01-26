@@ -14,6 +14,7 @@ class Empresa extends Match{
     List<Candidato> empresaLikedCandidato
 
 
+
     List<String> mostrarCandidatoDisponiveis(Vagas vaga) {
         List<String> verCandidatos = null
         for (Candidato candidato : vaga.getCandidatoesDisponiveis()) {
