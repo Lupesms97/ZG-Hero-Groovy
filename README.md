@@ -6,3 +6,6 @@
 da aplicação LinkTinder.
 Totalmente otimizado e funcional.
 
+Luis Felipe Mota
+
+
