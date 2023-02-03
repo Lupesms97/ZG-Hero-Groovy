@@ -13,7 +13,12 @@ class Empresa extends Match{
     List<Vagas> vagasPublicadas = new ArrayList<>()
     List<Candidato> empresaLikedCandidato
 
+    Empresa(Vagas vaga) {
+        this.vaga = vaga
+    }
 
+    Empresa() {
+    }
 
     List<String> mostrarCandidatoDisponiveis(Vagas vaga) {
         List<String> verCandidatos = null

@@ -10,6 +10,12 @@ class Vagas {
     String descricaoVaga
     List<Candidato> candidatoesDisponiveis
 
+    Vagas(String titulo, double salario) {
+        this.titulo = titulo
+        this.salario = salario
+    }
+    Vagas(){}
+
     String getTitulo() {
         return titulo
     }

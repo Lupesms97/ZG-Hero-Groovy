@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e511974-bef7-4224-8f21-5b649e113ec2" name="Changes" comment="Fazendo logica de verificação de match, falta apenas implementar uma forma de verificar toda a lista e não somente um item dela">
+    <list default="true" id="8e511974-bef7-4224-8f21-5b649e113ec2" name="Changes" comment="verificação de match concluída&#10;Pontos de atenção">
+      <change afterPath="$PROJECT_DIR$/src/test/groovy/org/example/model/CandidatoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/groovy/org/example/model/EmpresaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/org/example/Main.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/org/example/Main.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/org/example/model/Candidato.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/org/example/model/Candidato.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/org/example/model/Empresa.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/org/example/model/Empresa.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/org/example/model/Match.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/org/example/model/Match.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/org/example/model/Vagas.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/org/example/model/Vagas.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,9 +22,49 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LinkeTInder" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="73736313-9ca3-40ea-a3d5-042c9d0fd5ee" />
+        <option name="url" value="https://github.com/Lupesms97/ZG-Hero-Groovy.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,16 +75,98 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/lupesms97/Área de Trabalho/WorkSpace/ZG-Hero-Groovy/Zh-hero-groovy&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_directory_selection": "/home/lupesms97/Área de Trabalho/WorkSpace/ZG-Hero-Groovy/LinkeTInder/src/test/groovy/org/example/model",
+    "last_opened_file_path": "/home/lupesms97/Área de Trabalho/WorkSpace/ZG-Hero-Groovy/Zh-hero-groovy",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.EmpresaTest">
+    <configuration name="EmpresaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.model.EmpresaTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EmpresaTest.testeMostarVagsPublicadas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.model.EmpresaTest.testeMostarVagsPublicadas&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'LinkeTInder.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="LinkeTInder.main" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/org/example/Main.groovy" />
@@ -58,6 +180,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.EmpresaTest" />
+        <item itemvalue="Gradle.EmpresaTest.testeMostarVagsPublicadas" />
+        <item itemvalue="Gradle.Tests in 'LinkeTInder.test'" />
         <item itemvalue="Groovy.Main" />
       </list>
     </recent_temporary>
@@ -92,12 +217,31 @@
       <option name="project" value="LOCAL" />
       <updated>1674674952953</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="verificação de match concluída&#10;Pontos de atenção">
+      <created>1674699973565</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674699973565</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeiro Commit do projeto refatorado" />
     <MESSAGE value="Fazendo logica de verificação de match, falta apenas implementar uma forma de verificar toda a lista e não somente um item dela" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fazendo logica de verificação de match, falta apenas implementar uma forma de verificar toda a lista e não somente um item dela" />
+    <MESSAGE value="verificação de match concluída&#10;Pontos de atenção" />
+    <option name="LAST_COMMIT_MESSAGE" value="verificação de match concluída&#10;Pontos de atenção" />
   </component>
 </project>
